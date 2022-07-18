@@ -1,1 +1,1 @@
-# Hunter-s-Sorrow
+# Hunter's Sorrow
