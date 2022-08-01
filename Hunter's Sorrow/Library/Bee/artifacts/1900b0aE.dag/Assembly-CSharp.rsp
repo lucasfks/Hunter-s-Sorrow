@@ -374,6 +374,8 @@
 "Assets/Scripts/AttackArea.cs"
 "Assets/Scripts/AttackAreaEnemy.cs"
 "Assets/Scripts/Camera.cs"
+"Assets/Scripts/Camera2.cs"
+"Assets/Scripts/NextLevel1.cs"
 "Assets/Scripts/NextLevel2.cs"
 "Assets/Sprites/Bandits - Pixel Art/Demo/Bandit.cs"
 "Assets/Sprites/Bandits - Pixel Art/Demo/Sensor_Bandit.cs"
