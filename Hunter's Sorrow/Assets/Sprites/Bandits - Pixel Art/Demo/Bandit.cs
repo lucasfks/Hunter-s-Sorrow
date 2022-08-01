@@ -30,14 +30,14 @@ public class Bandit : MonoBehaviour
         _isFacingRight = transform.localScale.x > 0;
     }
 
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
+    // void OnTriggerEnter2D(Collider2D other)
+    // {
     //    if (other.CompareTag("Player"))
     //    {
     //        _player = other.gameObject.Find(other.name);
     //        _player.Hit();
     //    }
-    //}
+    // }
 
     public void Update()
     {
