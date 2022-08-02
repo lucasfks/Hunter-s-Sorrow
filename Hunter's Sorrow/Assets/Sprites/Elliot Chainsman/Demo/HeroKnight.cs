@@ -53,30 +53,30 @@ public class HeroKnight : MonoBehaviour
         attackArea.SetActive(false);
     }
 
-    void Hit()
+    public void Hit()
     {
         life -= 1;
         print("Life: " + life);
         m_animator.SetTrigger("Hurt");
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            _firstHit = true;
-        }
-    }
-
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.CompareTag("Enemy") && (Time.frameCount > m_enemyHitTime + 1000 || _firstHit) && !dead)
-        {
-            _firstHit = false;
-            m_enemyHitTime = Time.frameCount;
-            Hit();
-        }
-    }
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("Enemy"))
+    //    {
+    //        _firstHit = true;
+    //    }
+    //}
+    //
+    //void OnTriggerStay2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("Enemy") && (Time.frameCount > m_enemyHitTime + 1000 || _firstHit) && !dead)
+    //    {
+    //        _firstHit = false;
+    //        m_enemyHitTime = Time.frameCount;
+    //        Hit();
+    //    }
+    //}
 
     // Update is called once per frame
     void Update()
@@ -92,7 +92,7 @@ public class HeroKnight : MonoBehaviour
         }
         else if (!dead)
         {
-            if (transform.position.y < initialPositionY - 5)
+            if (transform.position.y < initialPositionY - 10)
             {
                 life = 0;
             }

@@ -8,7 +8,7 @@ public class AttackArea : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.gameObject.SetActive(false);
+            other.gameObject.GetComponent<Bandit>().Death();
         }
     }
 }

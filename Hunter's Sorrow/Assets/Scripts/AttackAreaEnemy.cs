@@ -8,7 +8,7 @@ public class AttackAreaEnemy : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.gameObject.SetActive(false);
+            other.gameObject.GetComponent<HeroKnight>().Hit();
         }
     }
 }
