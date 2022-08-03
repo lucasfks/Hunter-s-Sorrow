@@ -9,7 +9,7 @@ public class Camera : MonoBehaviour
     private float positionY;
 
     void Start() {
-        // positionY = player.position.y + offset.y;
+        positionY = player.position.y + offset.y;
     }
     
     void Update()

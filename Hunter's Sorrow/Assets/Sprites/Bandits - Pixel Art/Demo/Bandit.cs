@@ -82,9 +82,9 @@ public class Bandit : MonoBehaviour
                     attackArea.SetActive(_attacking);
                 }
             }
-            _endPos = m_player.position.x;
+            _endPos = m_player.position.x - m_body2d.position.x;
 
-            if (_moveRight)
+            if (_endPos > 0)
             {
                 m_animator.SetInteger("AnimState", 2);
                 m_body2d.velocity = new Vector2(1 * m_speed, m_body2d.velocity.y);
@@ -92,18 +92,13 @@ public class Bandit : MonoBehaviour
                     Flip();
             }
 
-            if (m_body2d.position.x >= _endPos)
-                _moveRight = false;
-
-            if (!_moveRight)
+            if (_endPos < 0 && _endPos > -3)
             {
                 m_animator.SetInteger("AnimState", 2);
                 m_body2d.velocity = new Vector2(-1 * m_speed, m_body2d.velocity.y);
                 if (!_isFacingRight)
                     Flip();
             }
-            if (m_body2d.position.x <= _endPos)
-                _moveRight = true;
         }
     }
 
