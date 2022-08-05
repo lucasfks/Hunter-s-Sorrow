@@ -8,6 +8,6 @@ public class NextLevel2 : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
     }
 }
