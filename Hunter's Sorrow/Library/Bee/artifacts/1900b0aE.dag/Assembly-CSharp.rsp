@@ -375,6 +375,7 @@
 "Assets/Scripts/AttackAreaEnemy.cs"
 "Assets/Scripts/Camera.cs"
 "Assets/Scripts/Camera2.cs"
+"Assets/Scripts/Enemies/Goblin.cs"
 "Assets/Scripts/NextLevel1.cs"
 "Assets/Scripts/NextLevel2.cs"
 "Assets/Scripts/StartGame.cs"
@@ -384,6 +385,7 @@
 "Assets/Sprites/Elliot Chainsman/Demo/DestroyEvent_HeroKnight.cs"
 "Assets/Sprites/Elliot Chainsman/Demo/HeroKnight.cs"
 "Assets/Sprites/Elliot Chainsman/Demo/Sensor_HeroKnight.cs"
+"Assets/Sprites/omiStudio/Enemy Cow/Scripts/SetStateAnimation.cs"
 -langversion:9.0
 
 /deterministic
