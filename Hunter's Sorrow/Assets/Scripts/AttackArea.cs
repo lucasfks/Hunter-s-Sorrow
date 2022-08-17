@@ -8,11 +8,7 @@ public class AttackArea : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            try
-            {
-                other.gameObject.GetComponent<Bandit>().Death();
-            }
-            catch { other.gameObject.GetComponent<Goblin>().Death(); }
+            other.gameObject.GetComponent<Bandit>().Death();
         }
     }
 }
