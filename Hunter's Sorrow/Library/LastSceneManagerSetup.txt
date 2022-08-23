@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Sprites/Level 4 - Castle/Scene/Demo.unity
+- path: Assets/Scenes/Level 3.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
