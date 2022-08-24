@@ -10,5 +10,9 @@ public class AttackArea : MonoBehaviour
         {
             other.gameObject.GetComponent<Bandit>().Death();
         }
+        else if (other.CompareTag("BringerOfDeath"))
+        {
+            other.gameObject.GetComponent<BringerOfDeath>().Hit();
+        }
     }
 }
