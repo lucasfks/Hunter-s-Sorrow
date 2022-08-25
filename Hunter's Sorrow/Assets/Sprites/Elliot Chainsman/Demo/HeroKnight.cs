@@ -10,7 +10,7 @@ public class HeroKnight : MonoBehaviour
     [SerializeField] float m_rollForce = 6.0f;
     [SerializeField] bool m_noBlood = false;
     [SerializeField] GameObject m_slideDust;
-    [SerializeField] int life = 10;
+    [SerializeField] public int life = 5;
 
     private Animator m_animator;
     private Rigidbody2D m_body2d;
@@ -58,6 +58,11 @@ public class HeroKnight : MonoBehaviour
         life -= 1;
         print("Life: " + life);
         m_animator.SetTrigger("Hurt");
+    }
+
+    public int GetLife()
+    {
+        return life;
     }
 
     //void OnTriggerEnter2D(Collider2D other)

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class BringerOfDeath : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class BringerOfDeath : MonoBehaviour
 
     public bool _moveRight = true;
 
+    private GameObject speech = default;
+
     // Use this for initialization
     void Start()
     {
@@ -36,12 +39,14 @@ public class BringerOfDeath : MonoBehaviour
         _isFacingRight = transform.localScale.x > 0;
         attackArea = transform.GetChild(1).gameObject;
         attackArea.SetActive(false);
+        speech = transform.GetChild(2).gameObject;
     }
 
     public void Death()
     {
-        m_animator.SetTrigger("Death");
+        _cooldown = 0f;
         m_isDead = true;
+        m_animator.SetTrigger("Death");
         Destroy(m_body2d);
         Destroy(GetComponent<BoxCollider2D>());
         attackArea.SetActive(false);
@@ -67,62 +72,80 @@ public class BringerOfDeath : MonoBehaviour
         }
     }
 
+    private bool talking = true;
+
     public void Update()
     {
+        _cooldown += Time.deltaTime;
         if (!m_isDead)
         {
-            if (m_life <= 0)
-                Death();
-            _cooldown += Time.deltaTime;
             _endPos = m_player.position.x - m_body2d.position.x;
-            if (_attacking)
+            if (talking)
             {
-                _attackTimer += Time.deltaTime;
-
-                if (_attackTimer >= 1)
+                if (_endPos >= -0.5)
                 {
-                    _attackTimer = 0;
-                    _attacking = false;
-                    attackArea.SetActive(_attacking);
+                    speech.SetActive(false);
+                    talking = false;
                 }
             }
             else
             {
-                if (_endPos > 0.3)
+                if (m_life <= 0)
+                    Death();
+                if (_attacking)
                 {
-                    if (_cooldown >= 2)
+                    _attackTimer += Time.deltaTime;
+
+                    if (_attackTimer >= 1)
                     {
-                        //m_body2d.position = new Vector2(m_body2d.position.x - 1.5f, m_body2d.position.y);
-                        m_body2d.velocity = new Vector2(-1 * m_speed, m_body2d.velocity.y);
-                        if (_cooldown >= 2.5)
-                            _cooldown = 0;
-                    }
-                    else
-                    {
-                        m_animator.SetInteger("AnimState", 2);
-                        m_body2d.velocity = new Vector2(1 * m_speed, m_body2d.velocity.y);
-                        if (_isFacingRight)
-                            Flip();
+                        _attackTimer = 0;
+                        _attacking = false;
+                        attackArea.SetActive(_attacking);
                     }
                 }
-                else if (_endPos < -0.3 && _endPos > -3)
+                else
                 {
-                    if (_cooldown >= 2)
+                    if (_endPos > 0.3)
                     {
-                        //m_body2d.position = new Vector2(m_body2d.position.x + 1.5f, m_body2d.position.y);
-                        m_body2d.velocity = new Vector2(1 * m_speed, m_body2d.velocity.y);
-                        if (_cooldown >= 2.5)
-                            _cooldown = 0;
+                        if (_cooldown >= 2)
+                        {
+                            //m_body2d.position = new Vector2(m_body2d.position.x - 1.5f, m_body2d.position.y);
+                            m_body2d.velocity = new Vector2(-1 * m_speed, m_body2d.velocity.y);
+                            if (_cooldown >= 2.5)
+                                _cooldown = 0;
+                        }
+                        else
+                        {
+                            m_animator.SetInteger("AnimState", 2);
+                            m_body2d.velocity = new Vector2(1 * m_speed, m_body2d.velocity.y);
+                            if (_isFacingRight)
+                                Flip();
+                        }
                     }
-                    else
+                    else if (_endPos < -0.3 && _endPos > -3)
                     {
-                        m_animator.SetInteger("AnimState", 2);
-                        m_body2d.velocity = new Vector2(-1 * m_speed, m_body2d.velocity.y);
-                        if (!_isFacingRight)
-                            Flip();
+                        if (_cooldown >= 2)
+                        {
+                            //m_body2d.position = new Vector2(m_body2d.position.x + 1.5f, m_body2d.position.y);
+                            m_body2d.velocity = new Vector2(1 * m_speed, m_body2d.velocity.y);
+                            if (_cooldown >= 2.5)
+                                _cooldown = 0;
+                        }
+                        else
+                        {
+                            m_animator.SetInteger("AnimState", 2);
+                            m_body2d.velocity = new Vector2(-1 * m_speed, m_body2d.velocity.y);
+                            if (!_isFacingRight)
+                                Flip();
+                        }
                     }
                 }
             }
+        }
+        else
+        {
+            if (_cooldown >= 3)
+                SceneManager.LoadScene(5);
         }
     }
 
