@@ -323,15 +323,23 @@
 "Assets/Scripts/AttackAreaEnemy.cs"
 "Assets/Scripts/Camera.cs"
 "Assets/Scripts/Camera2.cs"
+"Assets/Scripts/EndGame.cs"
+"Assets/Scripts/Enemies/Goblin.cs"
+"Assets/Scripts/EvilWizard.cs"
+"Assets/Scripts/KingSpeech.cs"
+"Assets/Scripts/Lives.cs"
 "Assets/Scripts/NextLevel1.cs"
 "Assets/Scripts/NextLevel2.cs"
+"Assets/Scripts/NextLevel3.cs"
 "Assets/Scripts/StartGame.cs"
 "Assets/Sprites/Bandits - Pixel Art/Demo/Bandit.cs"
 "Assets/Sprites/Bandits - Pixel Art/Demo/Sensor_Bandit.cs"
+"Assets/Sprites/Bringer Of Death/Sprite Sheet/BringerOfDeath.cs"
 "Assets/Sprites/Elliot Chainsman/ColorSwap/ColorSwap_HeroKnight.cs"
 "Assets/Sprites/Elliot Chainsman/Demo/DestroyEvent_HeroKnight.cs"
 "Assets/Sprites/Elliot Chainsman/Demo/HeroKnight.cs"
 "Assets/Sprites/Elliot Chainsman/Demo/Sensor_HeroKnight.cs"
+"Assets/Sprites/omiStudio/Enemy Cow/Scripts/SetStateAnimation.cs"
 -langversion:9.0
 
 /deterministic

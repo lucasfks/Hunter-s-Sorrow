@@ -28,5 +28,8 @@ public class StartGame : MonoBehaviour
             active = !active;
             m_timeSinceActive = 0.0f;
         }
+
+        if (Input.GetKey(KeyCode.Escape))
+            Application.Quit();
     }
 }

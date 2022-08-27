@@ -476,13 +476,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'wasd - Move
+  m_Text: 'w/a/s/d - Move
 
     Space - Jump
 
     Left Click - Attack
 
-    Shift  - Roll'
+    Shift 
+    - Roll
+
+
+    Esc - Quit game'
 --- !u!222 &711451742
 CanvasRenderer:
   m_ObjectHideFlags: 0

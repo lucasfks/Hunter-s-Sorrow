@@ -86,6 +86,8 @@ public class HeroKnight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+            Application.Quit();
 
         //Death
         if (life <= 0 && !dead)

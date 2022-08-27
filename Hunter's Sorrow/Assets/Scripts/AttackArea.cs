@@ -14,5 +14,9 @@ public class AttackArea : MonoBehaviour
         {
             other.gameObject.GetComponent<BringerOfDeath>().Hit();
         }
+        else if (other.CompareTag("EvilWizard"))
+        {
+            other.gameObject.GetComponent<EvilWizard>().Hit();
+        }
     }
 }
