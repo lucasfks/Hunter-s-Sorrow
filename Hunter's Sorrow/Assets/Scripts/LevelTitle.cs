@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class LevelTitle : MonoBehaviour
 {
-    [SerializeField] GameObject m_player;
-    public GameObject reference;
-    private float _relativePosition;
+    private float _timer = 0f;
+    private GameObject title = default;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        title = transform.GetChild(0).gameObject;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        _relativePosition = m_player.position.x - reference.position.x;
-        
+        _timer += Time.deltaTime;
+
+        if (_timer >= 3f)
+        {
+            title.SetActive(false);
+        }
     }
 }
