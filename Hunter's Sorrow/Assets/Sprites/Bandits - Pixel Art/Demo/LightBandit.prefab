@@ -51,6 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8b435a8dc3f604e9a13c4acd7081c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  bladeSound: {fileID: 8300000, guid: 7053294e066eb1945baa4d9cc9194f15, type: 3}
   m_speed: 2
   m_jumpForce: 7.5
   m_player: {fileID: 0}

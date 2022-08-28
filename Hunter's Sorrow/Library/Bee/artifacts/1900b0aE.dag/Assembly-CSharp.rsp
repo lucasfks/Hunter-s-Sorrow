@@ -379,6 +379,7 @@
 "Assets/Scripts/Enemies/Goblin.cs"
 "Assets/Scripts/EvilWizard.cs"
 "Assets/Scripts/KingSpeech.cs"
+"Assets/Scripts/LevelTitle.cs"
 "Assets/Scripts/Lives.cs"
 "Assets/Scripts/NextLevel1.cs"
 "Assets/Scripts/NextLevel2.cs"

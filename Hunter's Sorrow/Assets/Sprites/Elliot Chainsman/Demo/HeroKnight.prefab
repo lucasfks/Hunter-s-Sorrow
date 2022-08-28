@@ -115,6 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5034bc83802944c9bca57c55e08978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  swordSound: {fileID: 8300000, guid: 13182107f288fdc47a11f9216c8f062b, type: 3}
   m_speed: 3
   m_jumpForce: 4
   m_rollForce: 5
@@ -372,6 +374,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f33768db93bb6a47911f7a5cab7bd78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  sliceSound: {fileID: 0}
 --- !u!1 &7967423529762950208
 GameObject:
   m_ObjectHideFlags: 0

@@ -91,6 +91,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -153,6 +157,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -231,6 +239,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -304,6 +316,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -376,6 +392,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -568,7 +588,7 @@ ScriptsOnlyBuild:
     className: LayoutElement
   - hash:
       serializedVersion: 2
-      Hash: daf9c827635a1c5160892ef4b8b3bc00
+      Hash: 71704df269d80991eeefb6f701109164
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BringerOfDeath
@@ -664,7 +684,7 @@ ScriptsOnlyBuild:
     className: SkeletonAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 83b9ca40fc1e83143fa2f79b6714237a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AttackArea
@@ -946,7 +966,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
-      Hash: 375f7e3e7696f0f8233cd721742ab59a
+      Hash: 7c53cc5a85d42bef4e96d73d4cee93e3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HeroKnight
@@ -1174,7 +1194,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: 8d3317dfd24caedac1ec352cb86f1e5f
+      Hash: e0eda0d29d1acdb5a295a1f62ce56787
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Bandit
@@ -1402,7 +1422,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: daf9c827635a1c5160892ef4b8b3bc00
+      Hash: 3a41712dc921636def20460f6255027e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EvilWizard

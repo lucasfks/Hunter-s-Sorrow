@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class HeroKnight : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip swordSound;
 
     [SerializeField] float m_speed = 4.0f;
     [SerializeField] float m_jumpForce = 4.0f;
@@ -51,6 +53,9 @@ public class HeroKnight : MonoBehaviour
         print("Life: " + life);
         attackArea = transform.GetChild(5).gameObject;
         attackArea.SetActive(false);
+
+        // swordSound = GetComponent<AudioSource>();
+        audioSource.clip = swordSound;
     }
 
     public void Hit()
@@ -184,6 +189,7 @@ public class HeroKnight : MonoBehaviour
 
                 // Call one of three attack animations "Attack1", "Attack2", "Attack3"
                 m_animator.SetTrigger("Attack" + m_currentAttack);
+                audioSource.Play();
                 _attacking = true;
                 attackArea.SetActive(_attacking);
                 // Reset timer

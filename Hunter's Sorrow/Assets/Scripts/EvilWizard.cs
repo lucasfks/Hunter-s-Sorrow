@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class EvilWizard : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip fireSound, backgroundSound;
+
     [SerializeField] float m_speed = 4.0f;
     [SerializeField] float m_jumpForce = 7.5f;
     [SerializeField] Transform m_player;
@@ -40,6 +43,8 @@ public class EvilWizard : MonoBehaviour
         attackArea = transform.GetChild(1).gameObject;
         attackArea.SetActive(false);
         speech = transform.GetChild(2).gameObject;
+
+        audioSource.clip = fireSound;
     }
 
     public void Death()
@@ -66,6 +71,7 @@ public class EvilWizard : MonoBehaviour
         if (other.CompareTag("Player") && m_timeSinceAttack > 2 && !_attacking && !m_isDead)
         {
             m_animator.SetTrigger("Attack");
+            audioSource.Play();
             _attacking = true;
             attackArea.SetActive(_attacking);
             m_timeSinceAttack = 0.0f;

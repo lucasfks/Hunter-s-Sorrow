@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Bandit : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip bladeSound;
+
     [SerializeField] float m_speed = 4.0f;
     [SerializeField] float m_jumpForce = 7.5f;
     [SerializeField] Transform m_player;
@@ -34,6 +37,8 @@ public class Bandit : MonoBehaviour
         _isFacingRight = transform.localScale.x > 0;
         attackArea = transform.GetChild(1).gameObject;
         attackArea.SetActive(false);
+
+        audioSource.clip = bladeSound;
     }
 
     // void OnTriggerEnter2D(Collider2D other)
@@ -61,6 +66,7 @@ public class Bandit : MonoBehaviour
         if (other.CompareTag("Player") && m_timeSinceAttack > 2 && !_attacking && !m_isDead)
         {
             m_animator.SetTrigger("Attack");
+            audioSource.Play();
             _attacking = true;
             attackArea.SetActive(_attacking);
             m_timeSinceAttack = 0.0f;
