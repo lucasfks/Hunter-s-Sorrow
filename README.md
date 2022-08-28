@@ -1,6 +1,6 @@
 # Hunter's Sorrow
 
-Hunter's Sorrow is a MetroidVania game.
+Hunter's Sorrow is a MetroidVania game developed with Unity game engine.
 
 ![image](https://user-images.githubusercontent.com/60987105/187092782-2b106ec6-269d-44eb-99a8-bcf421d0c2e3.png)
 
